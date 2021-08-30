@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verizon</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicons//favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicons//favicon-16x16.png">
+  <link rel="manifest" href="images/favicons//site.webmanifest">
+  <link rel="mask-icon" href="images/favicons//safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $(function () {
+      $("#tabs").tabs();
+    });
+  </script>
+  <script src="js/script.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+  </style>
+</head>
+
+<body>
+  <div class="bs-example">
+    <div class="alert alert-success text-center welcome-bar">
+      Welcome to IBM SAP Portal Integrated Platform
+    </div>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark bg-dark-v">
+      <a href="#" class="navbar-brand"><img class="img-responsive header-image" src="images/VZ-White.svg" /></a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav">
+          <li class="active"><a href="#" class="nav-item nav-link active header-nav">SAP General</a></li>
+          <li><a href="#" class="nav-item nav-link header-nav">Search SAP</a></li>
+          <!-- <li><a href="#" class="nav-item nav-link header-nav" tabindex="-1">TNC-P</a></li>-->
+        </div>
+      </div>
+    </nav>
+
+    <div class="content">
+      <h3 class="text-center heading-text">Welcome to Verizon SAP Onboarding Form</h3>
+      <div class="container container-form shadow-lg p-3 mb-3 bg-white rounded">
+        <form>
+          <div id="tabs">
+            <ul>
+              <li><a id="tab1" href="#tabs-1">SAP Details</a></li>
+              <li><a id="tab2" href="#tabs-2">Alarm Details</a></li>
+              <li><a id="tab3" href="#tabs-3">KPI Details</a></li>
+            </ul>
+            <div id="tabs-1">
+              <div id="tabs-1">
+                <div class="row mb-3" id="sap-container">
+                  <!-- <h2 class="tableHeading-sap">SAP Details</b></h2> -->
+                  <div class="sap-details shadow-lg p-3 mb-3 bg-white rounded">
+                    <div class="row mb-3">
+                      <div class="col-sm-6">
+                        <div class="row mb-3 mb3-custom">
+                          <label for="VNFType" class="col-sm-4 col-form-label">VNF
+                            Type:</label>
+                          <div class="VNFType">
+                            <input type="text" class="form-control" id="VNFType">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="row mb-3 mb3-custom">
+                          <label for="Vendor" class="col-sm-4 col-form-label">Vendor:</label>
+                          <div class="Vendor">
+                            <input type="text" class="form-control" id="Vendor">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
+                      <div class="col-sm-6">
+                        <div class="row mb-3 mb3-custom">
+                          <label for="Domain" class="col-sm-4 col-form-label">Domain:</label>
+                          <div class="Domain">
+                            <input type="text" class="form-control" id="Domain">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="row mb-3 mb3-custom">
+                          <label for="DomainType" class="col-sm-4 col-form-label">Domain
+                            Type:</label>
+                          <div class="DomainType">
+                            <input type="text" class="form-control" id="DomainType">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="tabs-2">
+              <div id="tabs-2">
+                <div class="row mb-3">
+                  <label for="DataSourceTopic" id="DataSourceTopic" class="col-sm-3 col-form-label">Select
+                    DataSource/Topic:</label>
+                  <div class="col-sm-3">
+                    <div class="dropdown">
+                      <button class="btn btn-default dropdown-toggle dropdown-button-custom" type="button"
+                        id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <span class="space">Please Select</span>
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu dropdown-custom" aria-labelledby="dropdownMenu">
+                        Wireless 5GCore, vRAN, 4G
+                        and
+                        eNSE
+                        <li style="margin-bottom: 20px;"><a href="#" id="flexRadioDefault1" class="cg-vsm_alert_api"
+                            data-value="cg-vsm_alert_api shadow-lg rounded">cg-vsm_alert_api</a>
+                        </li>
+                        <label style="display: block;margin-bottom: 0;">Wireline</label>
+                        <li><a class="wireline-dropdown" href="#" id="flexRadioDefault2"
+                            data-value="b">Eclipse-vcp-traps-alarm-east-ms</a></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <label for="inputUpload" class="col-sm-2 col-form-label label-height">Upload
+                    MIBs:</label>
+                  <div class="inputContainer col-sm-3">
+                    <button id="uploadmib" style="z-index: 0; width: 170px;"
+                      class='btn btn-primary uploadButton uploadButton1 uploadDisabled'>
+                      Choose File...
+                      <input type="file" id="inputUpload" class="uploadmib" size="40" disabled>
+                    </button>
+                    <div class="patch"></div>
+                    &nbsp;
+                    <span class='badge badge-success label label-info' id="upload-file-info"></span>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputSAPID" class="col-sm-2 col-form-label uploadAlarm">Upload
+                    AlarmDetails:</label>
+                  <div class="inputContainer col-sm-4">
+                    <button class='btn btn-primary uploadButton uploadButton2'>
+                      Choose File...
+                      <input type="file" id="inputUpload" name="file_source" size="40">
+                    </button><br />
+                    <label class="inst">Upload the Alarm Details file to be loaded in below section.
+                    </label>
+                    &nbsp;
+                    <span class='label label-info' id="upload-file-info"></span>
+                  </div>
+                  <div class="col-sm-4" id="sampleFiles">
+                    <div class="wirelesstopic" style="display: none;">
+                      <label class="card-title"><b>Sample Data :</b></label>
+                      <a href="C:\Users\RajivKumar\Desktop\Dekstop\Verison\07-July-2021\Verizon\Verizon\sample\Wirelesstopic_template.xlsx"
+                        download>Wirelesstopic_template.xlsx</a>
+                    </div>
+                    <div class="wirelinetopic" style="display: none;">
+                      <label class="card-title"><b>Sample Data :</b></label>
+                      <a href="C:\Users\RajivKumar\Desktop\Dekstop\Verison\07-July-2021\Verizon\Verizon\sample\Wirelinetopic_template.xlsx"
+                        download>Wirelinetopic_template.xlsx</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-responsive">
+                  <div class="table-wrapper">
+                    <div class="table-title">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <h2 class="tableHeading">Alarm Details for <span id="wire">Wireless</span></b></h2>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-custom " id="table-wireline" style="display: none;">
+                      <table class="table table-bordered shadow-lg p-3 mb-3 bg-white rounded" id="tbl-data1">
+                        <thead>
+                          <tr>
+                            <th>AlarmNames</th>
+                            <th>AmoRegEx</th>
+                            <th>Is Action Required</th>
+                            <th>Select ActionType</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>samsungUSM_1500368-5G</td>
+                            <td>^(?i)[^-]+_[^-]+_(5GN)+-(\d{11})+_[^-_]+[^-_]+_[^-_]+[^-_].*
+                            </td>
+                            <td class="ActionWirelineT">
+                              <select name="actionRequired" id="actionRequired" class="actionRequired">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                              </select>
+                            </td>
+                            <td class="selectActionWirelineT">
+                              <div class="row" id="selectActionWirelineT">
+                                <div class="col-sm">
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="checkbox" class="form-check-input" value="">Closed
+                                      Loop
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="checkbox" class="form-check-input" value="">Suppression
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="checkbox" class="form-check-input" value="">Escalation
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="col-sm">
+
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="checkbox" class="form-check-input" value="">ClearAlarm
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="checkbox" class="form-check-input" value="">Raise
+                                      TT
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <a class="add1" title="Add" data-toggle="tooltip"><i class="fa fa-plus"
+                                  aria-hidden="true"></i></a>
+                              <a class="edit1" title="Edit" data-toggle="tooltip"><i class="fa fa-pencil"
+                                  aria-hidden="true"></i></i></a>
+                              <a class="delete1" title="Delete" data-toggle="tooltip"><i class="fa fa-trash"
+                                  aria-hidden="true"></i></a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="col-sm-4 addnew">
+                        <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New</button>
+                      </div>
+                    </div>
+
+                    <div class="table-custom" id="table-wireless" style="display: none;">
+                      <table class="table table-bordered shadow-lg p-3 mb-3 bg-white rounded" id="tbl-data2">
+                        <thead>
+                          <tr>
+                            <th>AlarmNames</th>
+                            <th>NFType RegEx</th>
+                            <th>Is Action Required</th>
+                            <th>Select ActionType</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td id="AlarmNames">samsungUSM_1500368-5G</td>
+                            <td id="NFType">^[^-]+-[^:]+</td>
+                            <td class="ActionWirelessT">
+                              <select name="actionRequiredyesNo" id="actionRequiredyesNo">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                              </select>
+                            </td>
+                            <td class="selectActionWirelessT">
+                              <div class="row" id="selectActionWirelessT">
+                                <div class="col-sm">
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="checkbox" class="form-check-input" value="">Closed
+                                      Loop
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="checkbox" class="form-check-input" value="">Suppression
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="checkbox" class="form-check-input" value="">Escalation
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="col-sm">
+
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="checkbox" class="form-check-input" value="">ClearAlarm
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="checkbox" class="form-check-input" value="">Raise
+                                      TT
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <a class="add2" title="Add" data-toggle="tooltip"><i class="fa fa-plus"
+                                  aria-hidden="true"></i></a>
+                              <a class="edit2" title="Edit" data-toggle="tooltip"><i class="fa fa-pencil"
+                                  aria-hidden="true"></i></i></a>
+                              <a class="delete2" title="Delete" data-toggle="tooltip"><i class="fa fa-trash"
+                                  aria-hidden="true"></i></a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="col-sm-4 addnew">
+                        <button type="button" class="btn btn-info add-new1"><i class="fa fa-plus"></i> Add New</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="tabs-3">
+              <div id="tabs-3">
+                <div class="row mb-3">
+                  <div class="col-sm-6">
+                    <div class="row mb-3 mb3-custom">
+                      <label for="devicename" class="col-sm-4 col-form-label">Device Name:</label>
+                      <div class="devicename">
+                        <input type="text" class="form-control" id="devicename">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="row mb-3 mb3-custom">
+                      <label for="indicatorname" class="col-sm-4 col-form-label">Indicator
+                        Name:</label>
+                      <div class="indicatorname">
+                        <input type="text" class="form-control" id="indicatorname">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-sm-6">
+                    <div class="row mb-3 mb3-custom">
+                      <label for="objectname" class="col-sm-4 col-form-label">Object Name:</label>
+                      <div class="objectname">
+                        <input type="text" class="form-control" id="objectname" /><span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="row mb-3 mb3-custom">
+                      <label for="collectionPeriod" class="col-sm-4 col-form-label">Collection
+                        Period:</label>
+                      <div class="collectionPeriod">
+                        <input type="time" class="form-control" id="collectionPeriod" step="15" />
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="row mb-3">
+                  <div class="col-sm-6">
+                    <div class="row mb-3 mb3-custom">
+                      <label for="Unit" class="col-sm-4 col-form-label">Unit:</label>
+                      <div class="Unit">
+                        <input type="number" class="form-control" id="Unit" /><span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="row mb-3 mb3-custom">
+                      <label for="collectionPeriod" class="col-sm-4 col-form-label">Aggregator:</label>
+                      <div class="collectionPeriod">
+                        <div class="dropdown">
+                          <button class="btn btn-primary dropdown-toggle dropdown-toggle-a" type="button"
+                            data-toggle="dropdown">Please Select
+                            <span class="caret"></span></button>
+                          <ul class="dropdown-menu dropdown-menu-custom">
+                            <li><a href="#">Average</a></li>
+                            <li><a href="#">Max</a></li>
+                            <li><a href="#">Min</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="row mb-3">
+                  <div class="col-sm-6">
+                    <div class="row mb-3 mb3-custom">
+                      <label for="tca" class="col-sm-4 col-form-label">TCA:</label>
+                      <div class="tca">
+                        <input type="text" class="form-control" id="tca" /><span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="row mb-3 mb3-custom">
+                      <label for="entityTypeSAVNFType" class="col-sm-4 col-form-label">Entity
+                        Type/SA-VNFType:</label>
+                      <div class="entityTypeSAVNFType">
+                        <input type="text" class="form-control" id="entityTypeSAVNFType" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-sm-6">
+                    <div class="row mb-3 mb3-custom">
+                      <label for="Vendor" class="col-sm-4 col-form-label">Vendor:</label>
+                      <div class="Vendor">
+                        <input type="text" class="form-control" id="Vendor" /><span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <button class="btn btn-primary btn_submit">Submit</button>
+        </div>
+      </div>
+    </div>
+    </form>
+  </div>
+  </div>
+  <footer class=" page-footer">
+    <div class="col-sm-12">
+      <a href="#" class="navbar-brand"><img class="img-responsive footer-image-v" src="images/VZ-White.svg" /></a>
+    </div>
+  </footer>
+  </div>
+</body>
+
+</html>
